@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 Apr, 2022 11:41:58 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.eco.app.Product" table="product" catalog="ecommerce" optimistic-lock="version">
+        <id name="pid" type="int">
+            <column name="Pid" />
+            <generator class="assigned" />
+        </id>
+        <property name="stock" type="int">
+            <column name="Stock" not-null="true" />
+        </property>
+        <property name="price" type="int">
+            <column name="Price" not-null="true" />
+        </property>
+        <property name="pname" type="string">
+            <column name="Pname" length="20" not-null="true" />
+        </property>
+        <property name="pimg" type="string">
+            <column name="Pimg" length="40" not-null="true" />
+        </property>
+        <property name="pdes" type="string">
+            <column name="Pdes" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
